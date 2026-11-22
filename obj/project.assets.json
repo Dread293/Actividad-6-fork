@@ -2282,19 +2282,19 @@
     ]
   },
   "packageFolders": {
-    "/home/zdan/.nuget/packages/": {}
+    "/home/viza/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zdan/Documentos/Tecnologia-Web-1/Practica-06/Actividad-6/Actividad-6.csproj",
+      "projectUniqueName": "/home/viza/Documentos/TareaNumero6/Actividad-6-fork/Actividad-6.csproj",
       "projectName": "Actividad-6",
-      "projectPath": "/home/zdan/Documentos/Tecnologia-Web-1/Practica-06/Actividad-6/Actividad-6.csproj",
-      "packagesPath": "/home/zdan/.nuget/packages/",
-      "outputPath": "/home/zdan/Documentos/Tecnologia-Web-1/Practica-06/Actividad-6/obj/",
+      "projectPath": "/home/viza/Documentos/TareaNumero6/Actividad-6-fork/Actividad-6.csproj",
+      "packagesPath": "/home/viza/.nuget/packages/",
+      "outputPath": "/home/viza/Documentos/TareaNumero6/Actividad-6-fork/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/zdan/.nuget/NuGet/NuGet.Config"
+        "/home/viza/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
