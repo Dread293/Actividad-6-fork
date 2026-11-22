@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "Actividad-6/1.0.0": {
         "dependencies": {
+          "AspNet.Security.OAuth.Discord": "10.0.0",
+          "Microsoft.AspNetCore.Authentication.Google": "10.0.14",
           "Microsoft.AspNetCore.OpenApi": "10.0.15",
           "Microsoft.EntityFrameworkCore": "10.0.15",
           "Microsoft.EntityFrameworkCore.Design": "10.0.15",
@@ -18,11 +20,27 @@
           "Actividad-6.dll": {}
         }
       },
+      "AspNet.Security.OAuth.Discord/10.0.0": {
+        "runtime": {
+          "lib/net10.0/AspNet.Security.OAuth.Discord.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.56155"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/10.0.14": {
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "10.0.14.0",
+            "fileVersion": "10.0.1426.52326"
           }
         }
       },
@@ -514,12 +532,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNet.Security.OAuth.Discord/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2EcvQOUXXWsdRElkmxo6jz+2UgqsJ2F0uxmYj9/v6vdGpIT9+SKokV19mrMFGIYhK1JXvuTQwb+uKgYFKbxlg==",
+      "path": "aspnet.security.oauth.discord/10.0.0",
+      "hashPath": "aspnet.security.oauth.discord.10.0.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3enUvuEqorstWs1o2wc2hd8VgiF+fK0vZtGXl3wjE760887BNXUTh9vl86cLY+qdDujCHHWxA773nkWW4n8FBA==",
+      "path": "microsoft.aspnetcore.authentication.google/10.0.14",
+      "hashPath": "microsoft.aspnetcore.authentication.google.10.0.14.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/10.0.15": {
       "type": "package",
