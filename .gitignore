@@ -4,3 +4,5 @@ obj/
 
 # Archivos de Visual Studio
 .vs/
+appsettings.json
+appsettings.Development.json
