@@ -4,3 +4,18 @@ obj/
 
 # Archivos de Visual Studio
 .vs/
+*.user
+*.suo
+
+# Configuración local
+appsettings.Development.json
+.env
+.env.*
+
+# Certificados
+*.pfx
+*.p12
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
