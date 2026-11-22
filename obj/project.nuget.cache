@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FQYQow0boR0=",
+  "dgSpecHash": "5a59dMal17s=",
   "success": true,
   "projectFilePath": "/home/viza/Documentos/TareaNumero6/Actividad-6-fork/Actividad-6.csproj",
   "expectedPackageFiles": [
+    "/home/viza/.nuget/packages/aspnet.security.oauth.discord/10.0.0/aspnet.security.oauth.discord.10.0.0.nupkg.sha512",
     "/home/viza/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/home/viza/.nuget/packages/microsoft.aspnetcore.authentication.google/10.0.14/microsoft.aspnetcore.authentication.google.10.0.14.nupkg.sha512",
     "/home/viza/.nuget/packages/microsoft.aspnetcore.openapi/10.0.15/microsoft.aspnetcore.openapi.10.0.15.nupkg.sha512",
     "/home/viza/.nuget/packages/microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg.sha512",
     "/home/viza/.nuget/packages/microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",

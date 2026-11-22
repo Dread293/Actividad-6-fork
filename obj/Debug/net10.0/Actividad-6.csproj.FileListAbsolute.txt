@@ -245,3 +245,5 @@
 /home/viza/Documentos/TareaNumero6/Actividad-6-fork/obj/Debug/net10.0/Actividad-6.pdb
 /home/viza/Documentos/TareaNumero6/Actividad-6-fork/obj/Debug/net10.0/Actividad-6.genruntimeconfig.cache
 /home/viza/Documentos/TareaNumero6/Actividad-6-fork/obj/Debug/net10.0/ref/Actividad-6.dll
+/home/viza/Documentos/TareaNumero6/Actividad-6-fork/bin/Debug/net10.0/AspNet.Security.OAuth.Discord.dll
+/home/viza/Documentos/TareaNumero6/Actividad-6-fork/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.Google.dll
