@@ -65,6 +65,55 @@ namespace Actividad_6.Migrations
                     b.ToTable("configuracion_servidores");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Actividad_6.Models.EventoServidor", b =>
+                {
+                    b.Property<int>("IdEvento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id_evento");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdEvento"));
+
+                    b.Property<string>("Detalles")
+                        .HasColumnType("text")
+                        .HasColumnName("detalles");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("fecha");
+
+                    b.Property<int>("IdServidor")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_servidor");
+
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_usuario");
+
+                    b.Property<string>("Resultado")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)")
+                        .HasColumnName("resultado");
+
+                    b.Property<string>("TipoEvento")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasColumnName("tipo_evento");
+
+                    b.HasKey("IdEvento");
+
+                    b.HasIndex("IdServidor");
+
+                    b.HasIndex("IdUsuario");
+
+                    b.ToTable("evento_servidores");
+                });
+
+>>>>>>> upstream/main
             modelBuilder.Entity("Actividad_6.Models.Juego", b =>
                 {
                     b.Property<int>("IdJuego")
@@ -99,6 +148,41 @@ namespace Actividad_6.Migrations
                     b.ToTable("juegos");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Actividad_6.Models.PuertoServidor", b =>
+                {
+                    b.Property<int>("IdPuerto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id_puerto");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdPuerto"));
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("boolean")
+                        .HasColumnName("activo");
+
+                    b.Property<int>("IdServidor")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_servidor");
+
+                    b.Property<int>("PuertoContenedor")
+                        .HasColumnType("integer")
+                        .HasColumnName("puerto_contenedor");
+
+                    b.Property<int>("PuertoHost")
+                        .HasColumnType("integer")
+                        .HasColumnName("puerto_host");
+
+                    b.HasKey("IdPuerto");
+
+                    b.HasIndex("IdServidor");
+
+                    b.ToTable("puertos_servidores");
+                });
+
+>>>>>>> upstream/main
             modelBuilder.Entity("Actividad_6.Models.Servidor", b =>
                 {
                     b.Property<int>("IdServidor")
@@ -158,6 +242,55 @@ namespace Actividad_6.Migrations
                     b.ToTable("servidores");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Actividad_6.Models.Usuario", b =>
+                {
+                    b.Property<int>("IdUsuario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id_usuario");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdUsuario"));
+
+                    b.Property<string>("ContrasenaHash")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)")
+                        .HasColumnName("contrasena_hash");
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("character varying(150)")
+                        .HasColumnName("correo");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)")
+                        .HasColumnName("estado");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("fecha_creacion");
+
+                    b.Property<int>("IdRol")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_rol");
+
+                    b.Property<string>("NombreUsuario")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nombre_usuario");
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("usuarios");
+                });
+
+>>>>>>> upstream/main
             modelBuilder.Entity("Actividad_6.Models.VersionJuego", b =>
                 {
                     b.Property<int>("IdVersion")
@@ -205,6 +338,39 @@ namespace Actividad_6.Migrations
                     b.Navigation("Servidor");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Actividad_6.Models.EventoServidor", b =>
+                {
+                    b.HasOne("Actividad_6.Models.Servidor", "Servidor")
+                        .WithMany()
+                        .HasForeignKey("IdServidor")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Actividad_6.Models.Usuario", "Usuario")
+                        .WithMany("Eventos")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Servidor");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Actividad_6.Models.PuertoServidor", b =>
+                {
+                    b.HasOne("Actividad_6.Models.Servidor", "Servidor")
+                        .WithMany()
+                        .HasForeignKey("IdServidor")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Servidor");
+                });
+
+>>>>>>> upstream/main
             modelBuilder.Entity("Actividad_6.Models.Servidor", b =>
                 {
                     b.HasOne("Actividad_6.Models.VersionJuego", "VersionJuego")
@@ -226,6 +392,14 @@ namespace Actividad_6.Migrations
 
                     b.Navigation("Juego");
                 });
+<<<<<<< HEAD
+=======
+
+            modelBuilder.Entity("Actividad_6.Models.Usuario", b =>
+                {
+                    b.Navigation("Eventos");
+                });
+>>>>>>> upstream/main
 #pragma warning restore 612, 618
         }
     }
