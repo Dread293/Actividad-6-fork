@@ -11,6 +11,7 @@ namespace Actividad_6.Controllers;
 [Route("api/[controller]")]
 public class ServidoresController : ControllerBase
 {
+    //manitos ded
     private readonly AppDbContext _context;
     public ServidoresController(AppDbContext context) => _context = context;
 
