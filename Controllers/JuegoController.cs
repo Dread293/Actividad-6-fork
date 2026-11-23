@@ -25,6 +25,13 @@ public class JuegosController : ControllerBase
     }
 
     [HttpPost]
+    public async Task<IActionResult> CreateDuplicado(Juego juego)
+    {
+        _context.Juegos.Add(juego);
+        await _context.SaveChangesAsync();
+        return Ok(juego);
+    }
+    [HttpPost]
     public async Task<IActionResult> Create(Juego juego)
     {
         _context.Juegos.Add(juego);
