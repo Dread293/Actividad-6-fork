@@ -32,4 +32,45 @@ public class ServidoresController : ControllerBase
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetById), new { id = servidor.IdServidor }, servidor);
     }
+    // PUT: api/Servidores/5
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, Servidor servidor)
+    {
+        if (id != servidor.IdServidor)
+            return BadRequest(new { mensaje = "El ID no coincide." });
+
+        var existente = await _context.Servidores
+            .FirstOrDefaultAsync(s => s.IdServidor == id && !s.Eliminado);
+
+        if (existente == null)
+            return NotFound(new { mensaje = "Servidor no encontrado." });
+
+        _context.Entry(existente).CurrentValues.SetValues(servidor);
+
+        // Mantener la fecha original de creación.
+        existente.FechaCreacion = existente.FechaCreacion;
+        existente.Eliminado = false;
+
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+    // DELETE: api/Servidores/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var servidor = await _context.Servidores
+            .FirstOrDefaultAsync(s => s.IdServidor == id && !s.Eliminado);
+
+        if (servidor == null)
+            return NotFound(new { mensaje = "Servidor no encontrado." });
+
+        // Soft Delete: marcar como eliminado sin borrar de la BD.
+        servidor.Eliminado = true;
+
+        await _context.SaveChangesAsync();
+
+        return Ok(new { mensaje = "Servidor eliminado correctamente." });
+    }
 }
